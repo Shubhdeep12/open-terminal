@@ -1,0 +1,47 @@
+{
+  "name": "open-termainal",
+  "displayName": "Terminal Opener",
+  "description": "Open system terminal from vscode.",
+  "version": "1.0.0",
+  "publisher": "Shubhdeep12",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.openTerminal"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.openTerminal",
+        "title": "Open Terminal",
+        "category": "Terminal Launcher"
+      }
+    ],
+    "views": {
+      "activitybar": [
+        {
+          "id": "terminalLauncher",
+          "name": "Terminal Launcher"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./"
+  },
+  "volta": {
+    "node": "20.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "@types/vscode": "^1.96.0",
+    "typescript": "^5.7.3",
+    "vsce": "^1.97.0"
+  }
+}
